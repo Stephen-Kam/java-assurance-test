@@ -1,4 +1,4 @@
-Automation Assurance Specialist Test
+Java Assurance Test
 ===================
 
 This is an automated test pack to interact with the [sauce labs demo app](https://www.saucedemo.com/). Please take time
