@@ -1,0 +1,6 @@
+url: ${URL:-https://www.saucedemo.com}
+seleniumHubUrl: ${SELENIUM_HUB_URL:-http://localhost:4444}
+browser: ${BROWSER:-chrome}
+remote: ${REMOTE:-false}
+headless: ${HEADLESS:-true}
+waitTime: ${WAIT_TIME:-5}
