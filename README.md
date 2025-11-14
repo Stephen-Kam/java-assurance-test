@@ -7,8 +7,9 @@ homepage.
 
 ## Prerequisites:
 
-To run the tests in this pack, you will need to install Java (at least version 11) and Maven. Instructions on how to do
-so are below:
+To run the tests in this pack, you will need to install Java (at least version 11) and Maven and have Chrome browser installed. 
+
+Instructions on how to do so are below:
 
 ### Java:
 
@@ -17,7 +18,7 @@ from [here](https://www.java.com/en/download/help/download_options.html).
 
 Alternatively you can use [SDKMan](https://sdkman.io/) to download and manage your versions of java
 
-This test pack has been confirmed to work with versions 11 and 21 of Java
+This test pack has been confirmed to work with versions up to Java 21.
 
 ### Maven:
 
@@ -33,9 +34,11 @@ For Ubuntu Linux you can install maven using the following command:
 
 ### Running the tests
 
-You can run the tests using the following command
+You can run the tests in the following ways:
 
-```mvn clean test```
+- ```mvn clean test```
+- Executing the RunCucumberTest runner in demo/runner
+- Running the individual feature/scenario (Cucumber for java and gherkin plugins installed)
 
 ## Config
 
