@@ -8,18 +8,22 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
-  public final WebDriver driver;
+    public final WebDriver driver;
 
-  public BasePage() {
-    driver = WebDriverManager.getDriver();
-    PageFactory.initElements(driver, this);
-  }
+    public BasePage() {
+        driver = WebDriverManager.getDriver();
+        PageFactory.initElements(driver, this);
+    }
 
-  public void navigateTo(String url) {
-    driver.navigate().to(url);
-  }
+    public void navigateTo(String url) {
+        driver.navigate().to(url);
+    }
 
-  public WebElement findByCss(String css) {
-    return driver.findElement(By.cssSelector(css));
-  }
+    public WebElement findByCss(String css) {
+        return driver.findElement(By.cssSelector(css));
+    }
+
+    public WebElement findById(String id) {
+        return driver.findElement(By.id(id));
+    }
 }

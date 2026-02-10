@@ -3,6 +3,7 @@ package demo.stepdefs;
 import static org.junit.Assert.assertEquals;
 
 import demo.pages.BasePage;
+import demo.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,13 +14,14 @@ import org.openqa.selenium.By;
 public class StepDefs {
 
   private final BasePage basePage;
+  private final LoginPage loginPage;
 
   @Given("A user logs into the website as a regular user")
   public void aUserLogsIntoTheWebSiteAsARegularUser() {
     basePage.navigateTo("https://www.saucedemo.com");
-    basePage.driver.findElement(By.id("user-name")).sendKeys("standard_user");
-    basePage.driver.findElement(By.id("password")).sendKeys("secret_sauce");
-    basePage.driver.findElement(By.id("login-button")).click();
+    loginPage.enterUsername("standard_user");
+    loginPage.enterPassword("secret_sauce");
+    loginPage.findById("login-button").click();
   }
 
   @When("They add the {string} to their cart")
