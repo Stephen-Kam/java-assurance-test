@@ -10,7 +10,6 @@ public class WebDriverCapabilities {
   public ChromeOptions getChromeOptions() {
     ChromeOptions options = new ChromeOptions();
     options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-    options.addArguments("--guest");
     if (WebDriverConfig.getHeadless()) {
       options.addArguments("--headless");
     }
